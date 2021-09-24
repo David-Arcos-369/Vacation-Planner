@@ -1,2 +1,19 @@
-# Vacation-Planner
+# Vacation Planner
+
+![Vacation Planner](https://i.ibb.co/W0PVhtM/vacation-planner-cover.jpg)
+
+## Introduction
 This App is an advanced Travel Companion,  using Google-Maps, implementing Geolocation, Google Maps API, Searching for places, fetching restaurants, hotels and attractions based on location from specialized Rapid APIs. Using data filtering.
+I developed this app with Adrian Hajdin, of JavaScript Mastery, thank you.
+
+
+- React's file structure, hooks and refs
+- UI made with Material UI
+- Working with Google Maps API
+- Gathering data using RapidAPI
+
+# Resources
+
+https://youtu.be/UKdQjQX1Pko
+
+RapidAPI - https://rapidapi.com/hub
