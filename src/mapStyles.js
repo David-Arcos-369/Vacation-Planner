@@ -1,4 +1,5 @@
-export default [
+var mapStyles= mapStyles;
+export default mapStyles=[
   {
     featureType: 'all',
     elementType: 'all',

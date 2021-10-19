@@ -7,6 +7,7 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App = () => {
+
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
 
@@ -21,6 +22,8 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  // var filter = filter;
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
       setCoords({ lat: latitude, lng: longitude });
@@ -33,21 +36,18 @@ const App = () => {
     setFilteredPlaces(filtered);
   }, [places, rating]);
 
-  useEffect(() => {
+  useEffect((props) => {
     if (bounds) {
       setIsLoading(true);
-
-      getWeatherData(coords.lat, coords.lng)
-        .then((data) => setWeatherData(data));
-
-      getPlacesData(type, bounds.sw, bounds.ne)
-        .then((data) => {
+      getWeatherData(coords.lat, coords.lng).then((data) => setWeatherData(data));
+      getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
           setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
           setFilteredPlaces([]);
           setRating('');
           setIsLoading(false);
         });
     }
+
   }, [bounds, type]);
 
   const onLoad = (autoC) => setAutocomplete(autoC);
