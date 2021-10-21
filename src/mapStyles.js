@@ -1,5 +1,8 @@
-var mapStyles= mapStyles;
-export default mapStyles=[
+export default
+function  mapStyles() {
+  const map = new map(document.getElementById("map"), {
+
+    styles: [
   {
     featureType: 'all',
     elementType: 'all',
@@ -99,4 +102,6 @@ export default mapStyles=[
       },
     ],
   },
-];
+],
+});
+}
