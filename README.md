@@ -13,7 +13,5 @@ I developed this app with Adrian Hajdin, of JavaScript Mastery, thank you.
 - Gathering data using RapidAPI
 
 # Resources
-
-https://youtu.be/UKdQjQX1Pko
-
+To see the live-site click or use this link.  https://traveller-110321.netlify.app/
 RapidAPI - https://rapidapi.com/hub
